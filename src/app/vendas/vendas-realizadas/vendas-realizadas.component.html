@@ -1,0 +1,11 @@
+<table border="1" class="container">
+    <tr>
+        <th>Produto</th>
+        <th>Data Compra</th>
+    </tr>
+
+    <tr *ngFor="let item of itens; let i = index" >
+        <td> {{ item }} </td>
+        <td> {{ dataCompra[i] }} </td>
+    </tr>
+</table>
