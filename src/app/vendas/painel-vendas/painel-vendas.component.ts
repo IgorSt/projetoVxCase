@@ -1,3 +1,4 @@
+import { PainelVendasService } from './painel-vendas.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -14,16 +15,26 @@ export class PainelVendasComponent implements OnInit {
 
   produto: string[] = [];
   data: string[] = [];
+  venda :Object[];
+  enviado: boolean = false;
+  constructor(public vendasService:PainelVendasService){
 
-  onSubmit(form) {
-    console.log(form);
-    console.log(this.produto);
-    console.log(this.data);
   }
 
-  constructor() { }
 
   ngOnInit() {
+    this.venda = [{
+      item: 'aaa',
+      data: 'bbb'
+    }]
+  }
+
+  onSubmit() {
+    this.venda = [{
+      item: this.produto,
+      data: this.data
+    }]
+    this.enviado = true;
   }
 
 }

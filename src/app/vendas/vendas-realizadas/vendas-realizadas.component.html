@@ -4,8 +4,8 @@
         <th>Data Compra</th>
     </tr>
 
-    <tr *ngFor="let item of itens; let i = index" >
-        <td> {{ item }} </td>
-        <td> {{ dataCompra[i] }} </td>
+    <tr *ngFor="let item of vendas" >
+        <td> {{ item.item }} </td>
+        <td> {{ item.data }} </td>
     </tr>
 </table>

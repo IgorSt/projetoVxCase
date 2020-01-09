@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { PainelVendasService } from './../painel-vendas/painel-vendas.service';
 
@@ -9,18 +9,16 @@ import { PainelVendasService } from './../painel-vendas/painel-vendas.service';
 })
 export class VendasRealizadasComponent implements OnInit {
 
-  itens: string[];
-
-  dataCompra: string[];
+  vendas= [];
+  @Input() recebeVendas;
 
   constructor(private painelVendasSrv: PainelVendasService) {
-
-    this.itens = this.painelVendasSrv.getItens();
-    this.dataCompra = this.painelVendasSrv.getDataCompra();
 
   }
 
   ngOnInit() {
+    this.vendas = this.recebeVendas;
+    console.log(this.recebeVendas);
   }
 
 }

@@ -4,14 +4,19 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PainelVendasService {
-
+  venda :Object[];
   constructor() { }
 
-  getItens() {
-    return ['Capa Iphone / Carregador Iphone / Fone sem fio', 'Carregador Iphone', 'Carregador Motorola', 'Capa Moto G7'];
+  saveItens(valor){
+    this.venda = [{
+      item: valor.item,
+      data: valor.data
+    }]
+    console.log(this.venda);
   }
 
-  getDataCompra() {
-    return ['02/01/2020', '02/01/2020', '04/01/2020', '07/01/2020'];
+  getItens(){
+    return this.venda;
+    console.log(this.venda);
   }
 }
