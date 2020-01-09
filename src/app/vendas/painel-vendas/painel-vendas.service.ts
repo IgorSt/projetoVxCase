@@ -4,19 +4,23 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PainelVendasService {
-  venda :Object[];
-  constructor() { }
 
-  saveItens(valor){
-    this.venda = [{
-      item: valor.item,
-      data: valor.data
-    }]
-    console.log(this.venda);
-  }
+  // venda: Object[];
+  // constructor() { }
 
-  getItens(){
-    return this.venda;
-    console.log(this.venda);
-  }
+  // saveItens(valor) {
+  //   this.venda = [{
+  //     item: valor.item,
+  //     data: valor.data
+  //   }];
+  //   console.log(this.venda);
+  // }
+
+  // getItens() {
+  //   return this.venda;
+  //   console.log(this.venda);
+  // }
+
+  constructor() {}
+
 }

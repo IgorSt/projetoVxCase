@@ -8,6 +8,12 @@ import { VendasModule } from './vendas/vendas.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { environment } from './../environments/environment';
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -17,7 +23,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     VendasModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

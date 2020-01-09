@@ -3,17 +3,18 @@
     <div class="form-group">
         <label for="nomeProduto">Nome do Produto</label>
         <input type="text" class="form-control" id="nomeProduto" name="nomeProduto"
-        placeholder="Digite o nome do produto" [(ngModel)]="produto">
+        placeholder="Digite o nome do produto" [(ngModel)]="produto.nome">
     </div>
 
     <div class="form-group">
         <label for="dataVenda">Data da Venda</label>
         <input type="text" class="form-control" id="dataVenda" name="dataVenda"
-        placeholder="Data da venda" [(ngModel)]="data">
+        placeholder="Data da venda" [(ngModel)]="produto.data">
     </div>
 
     <button type="submit" class="btn btn-primary">Vender</button>
 
-    <app-vendas-realizadas [recebeVendas]="venda" *ngIf="enviado"></app-vendas-realizadas>
+    <!-- <app-vendas-realizadas [recebeVendas]="venda" *ngIf="enviado"></app-vendas-realizadas> -->
+    <app-vendas-realizadas></app-vendas-realizadas>
 
 </form>
