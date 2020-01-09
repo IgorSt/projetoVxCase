@@ -12,21 +12,21 @@ export class ProdutosService {
   constructor(private db: AngularFireDatabase) {}
 
   insert(produto: Produtos) {
-    this.db.list('produtos').push(produto)
+    this.db.list('vendas').push(produto)
       .then((result: any) => {
         console.log(result.key);
       });
   }
 
   update(produto: Produtos, key: string) {
-    this.db.list('produtos').update(key, produto)
+    this.db.list('vendas').update(key, produto)
       .catch((error: any) => {
         console.log(error);
       });
   }
 
   getAll() {
-    return this.db.list('produto')
+    return this.db.list('vendas')
       .snapshotChanges()
       .pipe(
         map(changes => {
@@ -36,6 +36,6 @@ export class ProdutosService {
   }
 
   delete(key: string) {
-    this.db.object(`produto/${key}`).remove();
+    this.db.object(`produtos/${key}`).remove();
   }
 }

@@ -46,7 +46,7 @@ export class PainelVendasComponent implements OnInit {
 
   constructor(
     private produtoSrv: ProdutosService,
-    private produtoDataSrv: ProdutoDataService
+    private produtoDataSrv: ProdutoDataService,
     ) {}
 
   ngOnInit() {

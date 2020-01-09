@@ -1,13 +1,19 @@
-<table border="1" class="container">
-    <tr>
-        <th>Produto</th>
-        <th>Data Compra</th>
-    </tr>
+<table border="1" class="table container table-stripped table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Produto</th>
+            <th scope="col">Data Venda</th>
+        </tr>
+    </thead>
 
-    <tr *ngFor="let produto of produtos | async" >
-        <td> {{ produto.nome }} </td>
-        <td> {{ produto.data }} </td>
-    </tr>
+    <thead class="thead-light">
+        <tr *ngFor="let produto of produtos | async" >
+            <td></td>
+            <td> {{ produto.nome }} </td>
+            <td> {{ produto.data }} </td>
+        </tr>
+    </thead>
 </table>
 
 
