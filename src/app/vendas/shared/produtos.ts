@@ -1,4 +1,4 @@
 export class Produtos {
     nome: string = '';
-    data: string = '';
+    data: number = 0;
 }
